@@ -48,7 +48,7 @@ class TestCreateAccount:
 
         time.sleep(5)
 
-    def test_create_account_with_valid_data_re_living_passed(self):
+    def test_create_account_with_valid_data_re_living_failed(self):
         my_register_page = MyRegisterPage(self.driver)
         my_register_page.open_page()
         my_register_page.create_account_complete("b.mackiewicz88@wp.pl")
@@ -127,4 +127,15 @@ class TestCreateAccount:
         my_register_page.check_forgot_password_link()
         msg = 'Reset password'
         assert msg in my_register_page.get_message_reset_password()
+        time.sleep(5)
+
+
+@pytest.mark.usefixtures("setup")
+class TestCreateAccountByOtherPlatform:
+
+    def test_create_account_by_fb(self):
+        my_register_page = MyRegisterPage(self.driver)
+        my_register_page.open_page()
+        my_register_page.create_account_by_fb("b.mackiewicz88@wp.pl", "Slonik18")
+        assert my_register_page.get_message_facebook()
         time.sleep(5)

@@ -20,6 +20,12 @@ class MyRegisterPage:
         self.message_terms_clients = locators.AccountCreation.message_terms_clients
         self.sing_in_link_assert = locators.AccountCreation.sing_in_link_assert
         self.message_reset_password = locators.AccountCreation.message_reset_password
+        self.register_fb_button = locators.AccountCreation.register_fb_button
+        self.message_fb = locators.AccountCreation.message_fb
+        self.log_email_input = locators.LoginLocators.log_email_input
+        self.fb_password_input = locators.AccountCreation.fb_password_input
+        self.log_in_fb_button = locators.AccountCreation.log_in_fb_button
+        self.accept_fb_button = locators.AccountCreation.accept_fb_button
 
     def open_page(self):
         self.driver.get("https://justjoin.it/devs/signup")
@@ -39,6 +45,13 @@ class MyRegisterPage:
         self.driver.find_element(*self.reg_email_input).send_keys(email)
         self.driver.find_element(*self.accept_term_checkbox).click()
         self.driver.find_element(*self.register_button).click()
+
+    def create_account_by_fb(self, email, passsword):
+        self.driver.find_element(*self.register_fb_button).click()
+        self.driver.find_element(*self.log_email_input).send_keys(email)
+        self.driver.find_element(*self.fb_password_input).send_keys(passsword)
+        self.driver.find_element(*self.accept_fb_button).click()
+      #  self.driver.find_element(*self.log_in_fb_button).click()
 
     def check_terms_link(self):
         self.driver.find_element(*self.terms_link).click()
@@ -72,3 +85,9 @@ class MyRegisterPage:
 
     def get_message_reset_password(self):
         return self.driver.find_element(*self.message_reset_password).text
+
+    def get_message_facebook(self):
+        return self.driver.find_element(*self.message_fb).text
+
+
+

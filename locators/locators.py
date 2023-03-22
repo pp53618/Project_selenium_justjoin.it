@@ -17,6 +17,11 @@ class AccountCreation:
     message_terms_clients = (By.TAG_NAME, "h6")
     sing_in_link_assert = (By.PARTIAL_LINK_TEXT, "Sign in")
     message_reset_password = (By.XPATH, "//button[@type='submit']//span")
+    register_fb_button = (By.XPATH, "//a[@href='/developers/auth/facebook']")
+    message_fb = (By.CLASS_NAME, "login_page")
+    fb_password_input = (By.XPATH, "//input[@name ='pass']")
+    log_in_fb_button = (By.ID, "loginbutton")
+    accept_fb_button = (By.XPATH, "//button[@data-cookiebanner='accept_button']")
 
 
 class LoginLocators:
