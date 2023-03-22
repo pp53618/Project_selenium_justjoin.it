@@ -17,3 +17,15 @@ class AccountCreation:
     message_terms_clients = (By.TAG_NAME, "h6")
     sing_in_link_assert = (By.PARTIAL_LINK_TEXT, "Sign in")
     message_reset_password = (By.XPATH, "//button[@type='submit']//span")
+
+
+class LoginLocators:
+
+    log_email_input = (By.XPATH, "//input[@name='email']")
+    password_input = (By.XPATH, "//INPUT[@name='password']")
+    sing_in_button = (By.XPATH, "//button[@type='submit']")
+    reset_password_button = (By.XPATH, "//button[@type='submit']")
+    message_my_profile = (By.XPATH, "//div[@class='css-jtlf28']")
+    message_reset_password_assert = (By.TAG_NAME, "h1")
+    message_password_assert = (By.XPATH, "//div[contains(@class,'MuiGrid-align-items-xs-center')]//label")
+    register_button = (By.XPATH, "//a[@href='/devs/signup']")
