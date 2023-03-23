@@ -26,6 +26,20 @@ class MyRegisterPage:
         self.fb_password_input = locators.AccountCreation.fb_password_input
         self.log_in_fb_button = locators.AccountCreation.log_in_fb_button
         self.accept_fb_button = locators.AccountCreation.accept_fb_button
+        self.register_google_button = locators.AccountCreation.register_google_button
+        self.google_email_input = locators.AccountCreation.google_email_input
+        self.google_next_button = locators.AccountCreation.google_next_button
+        self.message_google = locators.AccountCreation.message_google
+        self.register_github_button = locators.AccountCreation.register_github_button
+        self.github_email_input = locators.AccountCreation.github_email_input
+        self.github_password_input = locators.AccountCreation.github_password_input
+        self.github_sing_in_button = locators.AccountCreation.github_sing_in_button
+        self.message_github = locators.AccountCreation.message_github
+        self.register_linkedin_button = locators.AccountCreation.register_linkedin_button
+        self.linkedin_email_input = locators.AccountCreation.linkedin_email_input
+        self.linkedin_password_input = locators.AccountCreation.linkedin_password_input
+        self.linkedin_sing_in_button = locators.AccountCreation.linkedin_sing_in_button
+        self.message_linkedin = locators.AccountCreation.message_linkedin
 
     def open_page(self):
         self.driver.get("https://justjoin.it/devs/signup")
@@ -52,6 +66,23 @@ class MyRegisterPage:
         self.driver.find_element(*self.fb_password_input).send_keys(passsword)
         self.driver.find_element(*self.accept_fb_button).click()
       #  self.driver.find_element(*self.log_in_fb_button).click()
+
+    def create_account_by_google(self, email):
+        self.driver.find_element(*self.register_google_button).click()
+        self.driver.find_element(*self.google_email_input).send_keys(email)
+        self.driver.find_element(*self.google_next_button).click()
+
+    def create_account_by_github(self, email, password):
+        self.driver.find_element(*self.register_github_button).click()
+        self.driver.find_element(*self.github_email_input).send_keys(email)
+        self.driver.find_element(*self.github_password_input).send_keys(password)
+        self.driver.find_element(*self.github_sing_in_button).click()
+
+    def create_account_by_linkedin(self, email, password):
+        self.driver.find_element(*self.register_linkedin_button).click()
+        self.driver.find_element(*self.linkedin_email_input).send_keys(email)
+        self.driver.find_element(*self.linkedin_password_input).send_keys(password)
+        self.driver.find_element(*self.linkedin_sing_in_button).click()
 
     def check_terms_link(self):
         self.driver.find_element(*self.terms_link).click()
@@ -89,5 +120,11 @@ class MyRegisterPage:
     def get_message_facebook(self):
         return self.driver.find_element(*self.message_fb).text
 
+    def get_message_google(self):
+        return self.driver.find_element(*self.message_google).text
 
+    def get_message_github(self):
+        return self.driver.find_element(*self.message_github).text
 
+    def get_message_linkedin(self):
+        return self.driver.find_element(*self.message_linkedin).text

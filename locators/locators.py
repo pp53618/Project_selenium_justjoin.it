@@ -22,6 +22,20 @@ class AccountCreation:
     fb_password_input = (By.XPATH, "//input[@name ='pass']")
     log_in_fb_button = (By.ID, "loginbutton")
     accept_fb_button = (By.XPATH, "//button[@data-cookiebanner='accept_button']")
+    register_google_button = (By.XPATH, "//a[@href='/developers/auth/google']")
+    google_email_input = (By.XPATH, "//input[@type='email']")
+    google_next_button = (By.XPATH, "//button[@type='button']")
+    message_google = (By.XPATH, "//div[@jsname='YASyvd']")
+    register_github_button = (By.XPATH, "//a[@href='/developers/auth/github']")
+    github_email_input = (By.XPATH, "//input[@name='login']")
+    github_password_input = (By.XPATH, "//input[@name='password']")
+    github_sing_in_button = (By.XPATH, "//input[@type='submit']")
+    message_github = (By.XPATH, "//h2[contains(@class,'mb-4')]")
+    register_linkedin_button = (By.XPATH, "//a[@href='/developers/auth/linkedin']")
+    linkedin_email_input = (By.ID, "username")
+    linkedin_password_input = (By.ID, "password")
+    linkedin_sing_in_button = (By.XPATH, "//button[@type='submit']")
+    message_linkedin = (By.XPATH, "//h1[@class='header__logo']")
 
 
 class LoginLocators:

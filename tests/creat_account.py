@@ -139,3 +139,27 @@ class TestCreateAccountByOtherPlatform:
         my_register_page.create_account_by_fb("b.mackiewicz88@wp.pl", "Slonik18")
         assert my_register_page.get_message_facebook()
         time.sleep(5)
+
+    def test_create_account_by_google(self):
+        my_register_page = MyRegisterPage(self.driver)
+        my_register_page.open_page()
+        my_register_page.create_account_by_google("b.mackiewicz88@wp.pl")
+        msg = "Informacje o programiście"
+        assert msg in my_register_page.get_message_google()
+        time.sleep(5)
+
+    def test_create_account_by_github(self):
+        my_register_page = MyRegisterPage(self.driver)
+        my_register_page.open_page()
+        my_register_page.create_account_by_github("b.mackiewicz88@wp.pl", "slonik1819")
+        msg = "Authorize just-join-it"
+        assert msg in my_register_page.get_message_github()
+        time.sleep(5)
+
+    def test_create_account_by_linked(self):
+        my_register_page = MyRegisterPage(self.driver)
+        my_register_page.open_page()
+        my_register_page.create_account_by_linkedin("b.mackiewicz88@wp.pl", "slonik1819")
+        msg = "LinkedIn"
+        assert msg in my_register_page.get_message_linkedin()
+        time.sleep(5)
