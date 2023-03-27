@@ -18,7 +18,6 @@ class TestCreateAccount:
         my_register_page.create_account_no_date()
         msg = 'Email is a required field'
         assert msg in my_register_page.get_message_email_required()
-
         time.sleep(5)
 
     def test_create_account_enter_email_no_confirmation_regulations_failed(self):
@@ -27,7 +26,6 @@ class TestCreateAccount:
         email = str(random.randint(0, 1000000)) + "b.mackiewicz88@wp.pl"
         my_register_page.create_account_email_only(email)
         assert my_register_page.is_register_link_assert_displayed()
-
         time.sleep(5)
 
     def test_create_account_no_email_entry_with_acceptance_regulations_failed(self):
@@ -45,7 +43,6 @@ class TestCreateAccount:
         my_register_page.create_account_complete(email)
         msg = 'Get started for free'
         assert msg in my_register_page.get_message_get_started()
-
         time.sleep(5)
 
     def test_create_account_with_valid_data_re_living_failed(self):

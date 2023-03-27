@@ -48,3 +48,15 @@ class LoginLocators:
     message_reset_password_assert = (By.TAG_NAME, "h1")
     message_password_assert = (By.XPATH, "//div[contains(@class,'MuiGrid-align-items-xs-center')]//label")
     register_button = (By.XPATH, "//a[@href='/devs/signup']")
+
+
+class SearchLocators:
+
+    search_home_input = (By.XPATH, "//input[@placeholder='Search']")
+    js_button = (By.XPATH, "//a[@href='/all/javascript']")
+    search_js_category_span = (By.XPATH, "//span[text()='JavaScript']")
+    message_js_assert = (By.XPATH, "//span[@class='css-lp92kk']")
+
+
+
+
