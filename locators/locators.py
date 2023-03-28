@@ -55,8 +55,9 @@ class SearchLocators:
     search_home_input = (By.XPATH, "//input[@placeholder='Search']")
     js_button = (By.XPATH, "//a[@href='/all/javascript']")
     search_js_category_span = (By.XPATH, "//span[text()='JavaScript']")
-    message_js_assert = (By.XPATH, "//span[@class='css-lp92kk']")
+    message_results_search_assert = (By.XPATH, "//span[@class='css-lp92kk']")
+    search_js_category_xpath = (By.XPATH, "//span[text()='JavaScript']")
+    search_html_category_xpath = (By.XPATH, "//span[text()='HTML']")
+    search_category_xpath = (By.XPATH, "//span[@class='css-g90fw7']")
 
-
-
-
+#    back_search_button = (By.XPATH, "//button[contains(@class,'css-lp92kk')]//span")

@@ -10,8 +10,11 @@ class MyHomeSearchPage:
         self.driver = driver
         self.search_home_input = locators.SearchLocators.search_home_input
         self.js_button = locators.SearchLocators.js_button
-        self.search_js_category_span = locators.SearchLocators.search_js_category_span
-        self.message_js_assert = locators.SearchLocators.message_js_assert
+        self.search_js_category_xpath = locators.SearchLocators.search_js_category_xpath
+        self.message_results_search_assert = locators.SearchLocators.message_results_search_assert
+        self.search_html_category_xpath = locators.SearchLocators.search_html_category_xpath
+        self.search_category_xpath = locators.SearchLocators.search_category_xpath
+#        self.back_search_button = locators.SearchLocators.back_search_button
 
     def open_page(self):
         self.driver.get("https://justjoin.it/")
@@ -19,9 +22,17 @@ class MyHomeSearchPage:
     def button_categories(self):
         self.driver.find_element(*self.js_button).click()
 
-    def categories_search(self):
+    def categories_search_js(self):
         self.driver.find_element(*self.search_home_input).click()
-        self.driver.find_element(*self.search_js_category_span).click()
+        self.driver.find_element(*self.search_js_category_xpath).click()
 
-    def get_message_js_assert(self):
-        return self.driver.find_element(*self.message_js_assert).text
+    def categories_search_html(self, category):
+        self.driver.find_element(*self.search_home_input).send_keys(category)
+        self.driver.find_element(*self.search_html_category_xpath).click()
+
+    def categories_search_other(self, category):
+        self.driver.find_element(*self.search_home_input).send_keys(category)
+        self.driver.find_element(*self.search_category_xpath).click()
+
+    def get_message_results_search_assert(self):
+        return self.driver.find_element(*self.message_results_search_assert).text
