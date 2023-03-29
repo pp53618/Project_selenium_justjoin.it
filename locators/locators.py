@@ -53,11 +53,17 @@ class LoginLocators:
 class SearchLocators:
 
     search_home_input = (By.XPATH, "//input[@placeholder='Search']")
-    js_button = (By.XPATH, "//a[@href='/all/javascript']")
     search_js_category_span = (By.XPATH, "//span[text()='JavaScript']")
     message_results_search_assert = (By.XPATH, "//span[@class='css-lp92kk']")
+    is_chat_visibility_assert = (By.XPATH, "//div[@id='chat-widget-container']")
+    message_error_search = (By.XPATH, "//span[@class='css-x62lqu']")
     search_js_category_xpath = (By.XPATH, "//span[text()='JavaScript']")
     search_html_category_xpath = (By.XPATH, "//span[text()='HTML']")
     search_category_xpath = (By.XPATH, "//span[@class='css-g90fw7']")
-
 #    back_search_button = (By.XPATH, "//button[contains(@class,'css-lp92kk')]//span")
+
+
+class ButtonLocators:
+
+    js_button = (By.XPATH, "//a[@href='/all/javascript']")
+    is_js_visibility_assert = (By.XPATH, "//img[@src='/static/media/javascript.59ed3183.svg']")

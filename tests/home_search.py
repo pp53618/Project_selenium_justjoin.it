@@ -13,13 +13,7 @@ from selenium.webdriver.support.select import Select
 @pytest.mark.usefixtures("setup")
 class TestCatalogSearch:
 
-    def test_directory_search(self):
-        my_home_search_page = MyHomeSearchPage(self.driver)
-        my_home_search_page.open_page()
-        my_home_search_page.button_categories()
-        time.sleep(5)
-
-    def test_directory_search_js(self):
+    def test_directory_search_js_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_js()
@@ -27,7 +21,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_html(self):
+    def test_directory_search_html_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_html(' HTML')
@@ -35,7 +29,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_php(self):
+    def test_directory_search_php_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' PHP')
@@ -43,7 +37,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_ruby(self):
+    def test_directory_search_ruby_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Ruby')
@@ -51,7 +45,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_python(self):
+    def test_directory_search_python_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Python')
@@ -59,7 +53,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_java(self):
+    def test_directory_search_java_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Java')
@@ -67,7 +61,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_scala(self):
+    def test_directory_search_scala_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Scala')
@@ -75,7 +69,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_c(self):
+    def test_directory_search_c_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' C')
@@ -83,7 +77,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_mobile(self):
+    def test_directory_search_mobile_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Mobile')
@@ -91,7 +85,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_testing(self):
+    def test_directory_search_testing_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Testing')
@@ -99,7 +93,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_devops(self):
+    def test_directory_search_devops_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' DevOps')
@@ -107,7 +101,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_admin(self):
+    def test_directory_search_admin_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Admin')
@@ -115,7 +109,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_pm(self):
+    def test_directory_search_pm_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' PM')
@@ -123,7 +117,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_game(self):
+    def test_directory_search_game_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Game')
@@ -131,7 +125,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_analytics(self):
+    def test_directory_search_analytics_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Analytics')
@@ -139,7 +133,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_security(self):
+    def test_directory_search_security_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Security')
@@ -147,7 +141,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_data(self):
+    def test_directory_search_data_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Data')
@@ -155,7 +149,7 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_support(self):
+    def test_directory_search_support_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' Support')
@@ -163,11 +157,27 @@ class TestCatalogSearch:
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
 
-    def test_directory_search_erp(self):
+    def test_directory_search_erp_passed(self):
         my_home_search_page = MyHomeSearchPage(self.driver)
         my_home_search_page.open_page()
         my_home_search_page.categories_search_other(' ERP')
         msg = 'ERP'
         assert msg in my_home_search_page.get_message_results_search_assert()
         time.sleep(5)
+
+    def test_directory_search_entering_special_characters_failed(self):
+        my_home_search_page = MyHomeSearchPage(self.driver)
+        my_home_search_page.open_page()
+        my_home_search_page.categories_search_other(' ERP#$%)*')
+        assert my_home_search_page.is_chat_visibility_displayed()
+        time.sleep(5)
+
+    def test_directory_search_entering_numbers_only_passed(self):
+        my_home_search_page = MyHomeSearchPage(self.driver)
+        my_home_search_page.open_page()
+        my_home_search_page.categories_search_other(' 45647880')
+        msg = 'Sorry, there are no job offers for:'
+        assert msg in my_home_search_page.get_message_error_search()
+        time.sleep(5)
+
 

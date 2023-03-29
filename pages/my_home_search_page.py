@@ -9,18 +9,16 @@ class MyHomeSearchPage:
     def __init__(self, driver):
         self.driver = driver
         self.search_home_input = locators.SearchLocators.search_home_input
-        self.js_button = locators.SearchLocators.js_button
         self.search_js_category_xpath = locators.SearchLocators.search_js_category_xpath
         self.message_results_search_assert = locators.SearchLocators.message_results_search_assert
         self.search_html_category_xpath = locators.SearchLocators.search_html_category_xpath
         self.search_category_xpath = locators.SearchLocators.search_category_xpath
+        self.is_chat_visibility_assert = locators.SearchLocators.is_chat_visibility_assert
+        self.message_error_search = locators.SearchLocators.message_error_search
 #        self.back_search_button = locators.SearchLocators.back_search_button
 
     def open_page(self):
         self.driver.get("https://justjoin.it/")
-
-    def button_categories(self):
-        self.driver.find_element(*self.js_button).click()
 
     def categories_search_js(self):
         self.driver.find_element(*self.search_home_input).click()
@@ -36,3 +34,9 @@ class MyHomeSearchPage:
 
     def get_message_results_search_assert(self):
         return self.driver.find_element(*self.message_results_search_assert).text
+
+    def is_chat_visibility_displayed(self):
+        return self.driver.find_element(*self.is_chat_visibility_assert).is_displayed()
+
+    def get_message_error_search(self):
+        return self.driver.find_element(*self.message_error_search).text
