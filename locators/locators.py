@@ -67,3 +67,7 @@ class ButtonLocators:
 
     js_button = (By.XPATH, "//a[@href='/all/javascript']")
     is_js_visibility_assert = (By.XPATH, "//img[@src='/static/media/javascript.59ed3183.svg']")
+    html_button = (By.XPATH, "//div[contains(@class,'css-15zzcp6')]")
+    is_html_visibility_assert = (By.XPATH, "//img[@src='/static/media/html.d0655391.svg']")
+    php_button = (By.XPATH, "//div[contains(@class,'css-css-8gwc1d')]")
+    is_php_visibility_assert = (By.XPATH, "//img[@src='/static/media/php.c114d6f0.svg']")
