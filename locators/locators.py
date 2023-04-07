@@ -148,3 +148,17 @@ class CitySelectionLocators:
     clear_filter_button = (By.XPATH, "//a[contains(@class,'css-1avvcn0')]")
     another_click_locations_button = (By.XPATH, "//button[contains(@class,'css-1atb8pb')]")
     message_offers_assert = (By.XPATH, "//div[@class='css-7grlje']")
+
+
+class MoreFiltersLocators:
+
+    more_filters_button = (By.XPATH, "//button[contains(@class,'css-p1hmmo')]")
+    b2b_button = (By.XPATH, "//span[text()='B2B']")
+    show_offers_button = (By.XPATH, "//span[text()='Show offers']")
+    message_search_b2b_assert = (By.XPATH, "//a[@href='/?employmentType=b2b']")
+    permanent_button = (By.XPATH, "//span[text()='Permanent']")
+    message_search_permanent_assert = (By.XPATH, "//a[@href='/?employmentType=permanent']")
+    mandate_contract_button = (By.XPATH, "//span[text()='Mandate Contract']")
+    message_search_mandate_contract_assert = (By.XPATH, "//a[@href='/?employmentType=mandate_contract']")
+    all_button = (By.XPATH, "//button[contains(@class,'css-2ocjl7')]")
+    another_click_locations_button = (By.XPATH, "//button[contains(@class,'css-jonq2z')]")
