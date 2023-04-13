@@ -103,3 +103,12 @@ class TestMoreFiltersCheckbox:
         my_more_filters_page.button_more_filters_checkbox()
         assert my_more_filters_page.is_message_search_friendly_ukraine_displayed()
         time.sleep(5)
+
+    def test_more_filters_checkbox_and_use_clear_filters_passed(self):
+        my_more_filters_page = MyMoreFiltersButton(self.driver)
+        my_more_filters_page.open_page()
+        my_more_filters_page.button_more_filters_checkbox()
+        my_more_filters_page.button_clear_filters()
+        msg = "Offers with salary"
+        assert msg in my_more_filters_page.get_message_offers()
+        time.sleep(5)
