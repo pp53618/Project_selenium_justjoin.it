@@ -172,3 +172,21 @@ class MoreFiltersLocators:
     all_seniority_button = (By.XPATH, "//button[contains(@class,'css-232rpx')]")
     show_only_friendly_offers_checkbox = (By.XPATH, "//div[@class='css-18zy4ti']//span")
     message_offers_ukraine_assert = (By.XPATH, "//a[@href='/?ukraineFriendly=true']")
+
+
+class MenuLocators:
+
+    menu_button = (By.XPATH, "//button[contains(@class,'MuiIconButton-edgeEnd-76')]")
+    programmer_100k_button = (By.XPATH, "//a[@href='https://justjoin.it/programista100k']")
+    message_programmer_100k_assert = (By.XPATH, "//a[@href='mailto:programista100k@justjoin.it']")
+    breakfast_with_programming_button = (By.XPATH, "//a[@href='https://justjoin.it/sniadanie-z-programowaniem']")
+    for_juniors_button = (By.XPATH, "//a[@href='/junior/']")
+    ambassador_program_button = (By.XPATH, "//a[@href='https://program-ambasadorski.justjoin.it']")
+    it_index_button = (By.XPATH, "//a[@href='https://justjoin.it/itx']")
+    event_button = (By.XPATH, "//a[@href='https://justjoin.it/itx']")
+    just_join_games_button = (By.XPATH, "//a[@href='https://games.justjoin.it']")
+    press_room_button = (By.XPATH, "//a[@href='https://media.justjoin.it']")
+    reports_button = (By.XPATH, "//a[@href='https://raport.justjoin.it/']")
+    careers_button = (By.XPATH, "//a[@href='https://justjoin.it/brands/story/just-join-it']")
+    message_breakfast_with_programming_assert = (By.XPATH, "//div[contains(@class,'jss92')]")
+    message_for_junior_assert = (By.TAG_NAME, "h1")
