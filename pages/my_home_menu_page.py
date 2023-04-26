@@ -20,8 +20,16 @@ class MyMenuButton:
         self.press_room_button = locators.MenuLocators.press_room_button
         self.reports_button = locators.MenuLocators.reports_button
         self.careers_button = locators.MenuLocators.careers_button
-        self.message_breakfast_with_programming_assert = locators.MenuLocators.message_breakfast_with_programming_assert
+        self.is_breakfast_with_programming_visibility_assert = locators.MenuLocators.is_breakfast_with_programming_visibility_assert
         self.message_for_junior_assert = locators.MenuLocators.message_for_junior_assert
+        self.message_ambassador_program_assert = locators.MenuLocators.message_ambassador_program_assert
+        self.message_it_index_assert = locators.MenuLocators.message_it_index_assert
+        self.message_event_assert = locators.MenuLocators.message_event_assert
+        self.is_just_join_games_visibility_assert = locators.MenuLocators.is_just_join_games_visibility_assert
+        self.message_press_room_assert = locators.MenuLocators.message_press_room_assert
+        self.message_reports_assert = locators.MenuLocators.message_reports_assert
+        self.cookie_button = locators.MenuLocators.cookie_button
+        self.message_careers_assert = locators.MenuLocators.message_careers_assert
 
     def open_page(self):
         self.driver.get("https://justjoin.it/")
@@ -38,11 +46,63 @@ class MyMenuButton:
         self.driver.find_element(*self.menu_button).click()
         self.driver.find_element(*self.for_juniors_button).click()
 
+    def button_ambassador_program(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.ambassador_program_button).click()
+
+    def button_it_index(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.it_index_button).click()
+
+    def button_event(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.event_button).click()
+
+    def button_just_join_games(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.just_join_games_button).click()
+
+    def button_press_room(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.press_room_button).click()
+
+    def button_reports(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.reports_button).click()
+
+    def button_careers(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.careers_button).click()
+
     def get_message_programmer_100k(self):
         return self.driver.find_element(*self.message_programmer_100k_assert).text
 
     def get_message_for_junior(self):
         return self.driver.find_element(*self.message_for_junior_assert).text
 
-    def is_message_breakfast_with_programming_displayed(self):
-        return self.driver.find_element(*self.message_breakfast_with_programming_assert).is_displayed()
+    def is_breakfast_with_programming_displayed(self):
+        return self.driver.find_element(*self.is_breakfast_with_programming_visibility_assert).is_displayed()
+
+    def get_message_ambassador_program(self):
+        return self.driver.find_element(*self.message_ambassador_program_assert).text
+
+    def get_message_it_index(self):
+        return self.driver.find_element(*self.message_it_index_assert).text
+
+    def get_message_event(self):
+        return self.driver.find_element(*self.message_event_assert).text
+
+    def is_just_join_games_displayed(self):
+        return self.driver.find_element(*self.is_just_join_games_visibility_assert).is_displayed()
+
+    def get_message_press_room(self):
+        return self.driver.find_element(*self.message_press_room_assert).text
+
+    def get_message_reports(self):
+        return self.driver.find_element(*self.message_reports_assert).text
+
+    def get_message_careers(self):
+        return self.driver.find_element(*self.message_careers_assert).text
