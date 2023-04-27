@@ -30,6 +30,16 @@ class MyMenuButton:
         self.message_reports_assert = locators.MenuLocators.message_reports_assert
         self.cookie_button = locators.MenuLocators.cookie_button
         self.message_careers_assert = locators.MenuLocators.message_careers_assert
+        self.rss_button = locators.MenuLocators.rss_button
+        self.help_button = locators.MenuLocators.help_button
+        self.terms_button = locators.MenuLocators.terms_button
+        self.is_chat_visibility_assert = locators.SearchLocators.is_chat_visibility_assert
+        self.message_terms_clients = locators.AccountCreation.message_terms_clients
+        self.sign_in_button = locators.MenuLocators.sign_in_button
+        self.log_email_input = locators.MenuLocators.log_email_input
+        self.log_password_input = locators.MenuLocators.log_password_input
+        self.log_sign_in_button = locators.MenuLocators.log_sign_in_button
+        self.message_invalid_email_or_password_assert = locators.MenuLocators.message_invalid_email_or_password_assert
 
     def open_page(self):
         self.driver.get("https://justjoin.it/")
@@ -77,6 +87,29 @@ class MyMenuButton:
         self.driver.find_element(*self.cookie_button).click()
         self.driver.find_element(*self.careers_button).click()
 
+    def button_rss(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.rss_button).click()
+
+    def button_help(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.help_button).click()
+
+    def button_terms(self):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.terms_button).click()
+
+    def button_sign_in(self, email, password):
+        self.driver.find_element(*self.menu_button).click()
+        self.driver.find_element(*self.cookie_button).click()
+        self.driver.find_element(*self.sign_in_button).click()
+        self.driver.find_element(*self.log_email_input).send_keys(email)
+        self.driver.find_element(*self.log_password_input).send_keys(password)
+        self.driver.find_element(*self.log_sign_in_button).click()
+
     def get_message_programmer_100k(self):
         return self.driver.find_element(*self.message_programmer_100k_assert).text
 
@@ -106,3 +139,12 @@ class MyMenuButton:
 
     def get_message_careers(self):
         return self.driver.find_element(*self.message_careers_assert).text
+
+    def is_chat_displayed(self):
+        return self.driver.find_element(*self.is_chat_visibility_assert).is_displayed()
+
+    def get_message_terms_clients(self):
+        return self.driver.find_element(*self.message_terms_clients).text
+
+    def get_message_invalid_email_or_password(self):
+        return self.driver.find_element(*self.message_invalid_email_or_password_assert).text

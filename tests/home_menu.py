@@ -88,3 +88,40 @@ class TestMenuButton:
         msg = "Just Join IT"
         assert msg in my_menu_page.get_message_careers()
         time.sleep(5)
+
+
+@pytest.mark.usefixtures("setup")
+class TestMenuButton2:
+
+    def test_hyperlink_rss_passed(self):
+        my_menu_page = MyMenuButton(self.driver)
+        my_menu_page.open_page()
+        my_menu_page.button_rss()
+        time.sleep(5)
+
+    def test_hyperlink_chat_passed(self):
+        my_menu_page = MyMenuButton(self.driver)
+        my_menu_page.open_page()
+        my_menu_page.button_help()
+        assert my_menu_page.is_chat_displayed()
+        time.sleep(5)
+
+    def test_hyperlink_terms_clients_passed(self):
+        my_menu_page = MyMenuButton(self.driver)
+        my_menu_page.open_page()
+        my_menu_page.button_terms()
+        msg = "Terms - Clients"
+        assert msg in my_menu_page.get_message_terms_clients()
+        time.sleep(5)
+
+
+@pytest.mark.usefixtures("setup")
+class TestMenuLoginButton:
+
+    def test_menu_sign_in_and_log_in_incorrect_password_passed(self):
+        my_menu_page = MyMenuButton(self.driver)
+        my_menu_page.open_page()
+        my_menu_page.button_sign_in("b.mackiewicz88@wp.pl", "Slonik18")
+        msg = "Invalid Email or password."
+        assert msg in my_menu_page.get_message_invalid_email_or_password()
+        time.sleep(5)
